@@ -1,6 +1,5 @@
 const { Binary } = require("binary-install");
 const os = require("os");
-const cTable = require("console.table");
 
 const error = (msg) => {
   console.error(msg);
@@ -32,9 +31,7 @@ const getPlatformMetadata = () => {
   }
 
   error(
-    `Platform with type "${type}" and architecture "${architecture}" is not supported by ${name}.\nYour system must be one of the following:\n\n${cTable.getTable(
-      supportedPlatforms
-    )}`
+    `Platform with type "${type}" and architecture "${architecture}" is not supported by ${name}.`
   );
 };
 
