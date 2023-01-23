@@ -15,7 +15,7 @@
   "license": "MIT",
   "author": "vladdoroniuk <vlad.doroniuk.dev@gmail.com>",
   "files": [
-    "./npm/**/*"
+    "npm"
   ],
   "main": "index.js",
   "bin": {
