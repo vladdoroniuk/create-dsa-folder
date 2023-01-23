@@ -1,6 +1,6 @@
 {
   "name": "create-dsa-folder",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A Rust-based CLI to quickly create a DSA folder",
   "keywords": [
     "rust",
