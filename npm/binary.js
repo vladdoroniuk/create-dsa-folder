@@ -13,7 +13,7 @@ const supportedPlatforms = [
     TYPE: "Windows_NT",
     ARCHITECTURE: "x64",
     RUST_TARGET: "win64",
-    BINARY_NAME: "dsa",
+    BINARY_NAME: "create-dsa-folder",
   },
 ];
 
