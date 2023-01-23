@@ -19,7 +19,7 @@
   ],
   "main": "index.js",
   "bin": {
-    "dsa": "./npm/run.js"
+    "create-dsa-folder": "./npm/run.js"
   },
   "repository": {
     "type": "git",
