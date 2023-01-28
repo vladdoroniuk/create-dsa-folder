@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const axios = require("axios");
 const tar = require("tar");
 const rimraf = require("rimraf");
