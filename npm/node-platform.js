@@ -1,5 +1,6 @@
-const { Binary } = require("./binary-install");
 const os = require("os");
+const path = require("path");
+const fs = require("fs");
 const { version, name, repository } = require("../package.json");
 
 const supportedPlatforms = [
@@ -34,15 +35,15 @@ const generateURL = () => {
 
 const generateBinPath = () => {
   const { BINARY_NAME } = getPlatformMetadata();
-  const installDirectory = join(__dirname, "bin");
+  const subPath = path.join(__dirname, "../bin");
 
-  if (!existsSync(installDirectory)) {
-    mkdirSync(installDirectory, { recursive: true });
+  if (!fs.existsSync(subPath)) {
+    fs.mkdirSync(subPath, { recursive: true });
   }
 
-  const binPath = join(installDirectory, BINARY_NAME);
+  const binPath = path.join(subPath, BINARY_NAME);
 
-  return { binPath, installDirectory };
+  return { subPath, binPath };
 };
 
 module.exports = {

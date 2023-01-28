@@ -24,6 +24,6 @@
   },
   "scripts": {
     "postinstall": "node ./npm/install.js",
-    "tgz": "tar czf create-dsa-folder-win64.tar.gz -C ./builds create-dsa-folder-win64"
+    "tgz": "tar czf create-dsa-folder-win64.tar.gz create-dsa-folder.exe"
   }
 }
