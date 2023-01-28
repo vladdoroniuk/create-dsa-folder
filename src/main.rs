@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 use std::io::Result;
 use std::fs::File;
 use clap::Parser;

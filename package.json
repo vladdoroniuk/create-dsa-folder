@@ -9,15 +9,12 @@
     "npm"
   ],
   "homepage": "https://github.com/vladdoroniuk/create-dsa-folder#create-dsa-folder",
-  "bugs": {
-    "url": "https://github.com/vladdoroniuk/create-dsa-folder/issues"
-  },
+  "bugs": "https://github.com/vladdoroniuk/create-dsa-folder/issues",
   "license": "MIT",
   "author": "vladdoroniuk <vlad.doroniuk.dev@gmail.com>",
   "files": [
     "npm"
   ],
-  "main": "index.js",
   "bin": {
     "create-dsa-folder": "./npm/run.js"
   },
@@ -26,9 +23,7 @@
     "url": "https://github.com/vladdoroniuk/create-dsa-folder.git"
   },
   "scripts": {
-    "postinstall": "node ./npm/install.js"
-  },
-  "dependencies": {
-    "binary-install": "^1.0.6"
+    "postinstall": "node ./npm/install.js",
+    "tgz": "tar czf create-dsa-folder-win64.tar.gz -C ./builds create-dsa-folder-win64"
   }
 }
