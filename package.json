@@ -23,7 +23,6 @@
     "url": "https://github.com/vladdoroniuk/create-dsa-folder.git"
   },
   "scripts": {
-    "postinstall": "node ./npm/install.js",
-    "tgz": "tar czf create-dsa-folder-win64.tar.gz create-dsa-folder.exe"
+    "postinstall": "node ./npm/install.js"
   }
 }
