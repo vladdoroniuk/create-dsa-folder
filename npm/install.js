@@ -1,8 +1,8 @@
 const zlib = require("zlib");
 const https = require("https");
 const fs = require("fs");
-const { generateURL, generateBinPath } = require("./node-platform");
 const path = require("path");
+const { generateURL, generateBinPath } = require("./node-platform");
 
 const fetch = (url) => {
   return new Promise((resolve, reject) => {
