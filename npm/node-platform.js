@@ -42,7 +42,7 @@ const generateBinPath = () => {
   }
 
   const binPath = path.join(subPath, BINARY_NAME);
-  const tarGzPath = path.join(`${name}-${RUST_TARGET}`, BINARY_NAME);
+  const tarGzPath = `${name}-${RUST_TARGET}/${BINARY_NAME}`;
 
   return { subPath, binPath, tarGzPath };
 };
