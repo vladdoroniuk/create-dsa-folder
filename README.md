@@ -1,6 +1,6 @@
 <p align="center">
   <picture>
-    <img alt="create-dsa-folder: A Rust-based CLI to quickly setup a DSA folder" src="https://user-images.githubusercontent.com/69749436/216099131-f7b55a4e-7fda-48ed-9420-865c383956fc.svg">
+    <img alt="create-dsa-folder: A Rust-based CLI to quickly setup a DSA folder" src="https://user-images.githubusercontent.com/69749436/216108535-907d4b29-2472-401d-b5da-7ec48a96ec83.svg">
   </picture>
 </p>
 
