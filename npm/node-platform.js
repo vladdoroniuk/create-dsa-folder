@@ -42,8 +42,9 @@ const generateBinPath = () => {
   }
 
   const binPath = path.join(subPath, BINARY_NAME);
+  cosnt tarGzPath = path.join(`${name}-${RUST_TARGET}`, BINARY_NAME)
 
-  return { subPath, binPath };
+  return { subPath, binPath, tarGzPath };
 };
 
 module.exports = {

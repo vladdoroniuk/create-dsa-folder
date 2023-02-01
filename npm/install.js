@@ -27,7 +27,7 @@ const fetch = (url) => {
   });
 };
 
-function extractFileFromTarGzip(buffer, binPath) {
+function extractFileFromTarGzip(buffer, tarGzPath) {
   try {
     buffer = zlib.unzipSync(buffer);
   } catch (err) {
@@ -38,14 +38,12 @@ function extractFileFromTarGzip(buffer, binPath) {
   let str = (i, n) =>
     String.fromCharCode(...buffer.subarray(i, i + n)).replace(/\0.*$/, "");
   let offset = 0;
-  binPathInTarGz = path.basename(binPath);
   while (offset < buffer.length) {
     let name = str(offset, 100);
     let size = parseInt(str(offset + 124, 12), 8);
     offset += 512;
     if (!isNaN(size)) {
-      if (name === binPathInTarGz)
-        return buffer.subarray(offset, offset + size);
+      if (name === tarGzPath) return buffer.subarray(offset, offset + size);
       offset += (size + 511) & ~511;
     }
   }
@@ -55,7 +53,7 @@ function extractFileFromTarGzip(buffer, binPath) {
 }
 
 const install = async () => {
-  const { subPath, binPath } = generateBinPath();
+  const { subPath, binPath, tarGzPath } = generateBinPath();
   const url = generateURL();
 
   if (fs.existsSync(binPath)) {
@@ -71,7 +69,7 @@ const install = async () => {
   try {
     fs.writeFileSync(
       binPath,
-      extractFileFromTarGzip(await fetch(url), binPath)
+      extractFileFromTarGzip(await fetch(url), tarGzPath)
     );
     fs.chmodSync(binPath, 0o755);
   } catch (e) {
