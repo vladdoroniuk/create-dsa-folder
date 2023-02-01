@@ -47,9 +47,7 @@ function extractFileFromTarGzip(buffer, tarGzPath) {
       offset += (size + 511) & ~511;
     }
   }
-  throw new Error(
-    `Could not find ${JSON.stringify(binPathInTarGz)} in archive`
-  );
+  throw new Error(`Could not find ${JSON.stringify(tarGzPath)} in archive`);
 }
 
 const install = async () => {
