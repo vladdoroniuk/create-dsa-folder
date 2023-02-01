@@ -34,7 +34,7 @@ const generateURL = () => {
 };
 
 const generateBinPath = () => {
-  const { BINARY_NAME } = getPlatformMetadata();
+  const { BINARY_NAME, RUST_TARGET } = getPlatformMetadata();
   const subPath = path.join(__dirname, "../bin");
 
   if (!fs.existsSync(subPath)) {
