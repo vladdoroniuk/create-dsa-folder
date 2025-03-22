@@ -17,10 +17,10 @@ fn dsa_init(dsa_name: &str, src: &str) -> Result<()> {
     std::fs::create_dir(&dsa_name)?;
     std::env::set_current_dir(&dsa_name)?;
 
-    let dsa_ts = format!("{}.ts", &dsa_name).to_string();
+    let dsa_ts = format!("{}.go", &dsa_name).to_string();
     File::create(dsa_ts)?;
 
-    let dsa_test_ts = format!("{}.test.ts", &dsa_name).to_string();
+    let dsa_test_ts = format!("{}_test.go", &dsa_name).to_string();
     File::create(&dsa_test_ts)?;
 
     let dsa_readme = String::from("README.md");
